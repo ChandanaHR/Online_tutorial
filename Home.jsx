@@ -1,3 +1,4 @@
+import samplevideo from "../videos/keyboard.mp4"
 export default function Home() {
     return (
         <div className="w-full min-h-screen bg-black flex flex-col">
@@ -18,6 +19,12 @@ export default function Home() {
                 </div>
                 <div className="text-white mt-6">
                 <p>Master AI and Machine Learning with expert-curated resources and structured guidance — build industry-ready skills and rise into the top tier of ML engineers.</p>
+                </div>
+                <div>
+                    <video width="640" height="360" controls>
+                        <source src={samplevideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
         </div>
     )
