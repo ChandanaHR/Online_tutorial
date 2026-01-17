@@ -63,6 +63,7 @@ export function Foundations() {
                                         <span className="text-2xl font-bold line-through text-gray-500">Rs 4000</span>
                                     </div>
                                     <button className="w-full bg-black text-white py-3 rounded-lg font-semibold mb-2">Click here to login and buy</button>
+                                    <p className="text-gray-600 text-center">Login to purchase this course</p>
                                 </div>
                             </div>
                             {/* Main end 1 */}
