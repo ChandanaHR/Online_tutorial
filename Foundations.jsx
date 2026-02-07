@@ -1,5 +1,7 @@
 import foundations from "./images/Foundations.png"
+import {useState} from "react"
 export function Foundations() {
+    const[open1,setopen1] = useState(false)
     return (
         <div>
            <div className="bg-gradient-to-r from-slate-950 via-blue-800 to-slate-800 text-white">
@@ -72,6 +74,47 @@ export function Foundations() {
                     {/* Main end */}
                 </div>
             </div> 
+            {/* Third part Syllabus */}
+            <div className="max-w-7xl mx-auto bg-black text-white px-6 py-20">
+                <h1>Chandana HR</h1>
+                <div className="bg-blue-900 text-color rounded-xl shadow-2xl p-8">
+                    <h1>Asha KS</h1>
+                    <div className="flex bg-white text-black p-5 justify-center items-center mb-6">
+                        <h1 className="text-3xl font-bold">Course Content</h1>
+                        <span className="text-sm text-gray-500">Syllabus</span>
+                    </div>
+                    <div className="space-y-4">
+                        <div className="border-b pb-4 flex font-medium justify-between" onClick={()=>setopen1(!open1)}>
+                            Introduction and Overview of Artificial Intelligence
+                            <span>{open1? "Arrow up":"Arrow down"}</span>
+                            {(open1 && <div className="pl-4">
+                                <ul className="list-disc space-y-2">
+                                    <li>Definition of Artificial Intelligence</li>
+                                    <li>History of Artificial Intelligence</li>
+                                    <li>Applications of AI</li>
+                                    <li>AI vs ML vs Deep Learning</li>
+                                    <li>Types of AI</li>
+                                </ul>
+                            </div>)}
+                        </div>
+                        <div className="border-b pb-4 flex font-medium justify-between" onClick={()=>setopen1(!open1)}>
+                                Mathematics and Fundamentals
+                            <span>{open1? "Arrow up":"Arrow down"}</span>
+                            {(open1 && <div className="pl-4">
+                                <ul className="list-disc space-y-2">
+                                    <li>Linear Algebra</li>
+                                    <li>Probability theory</li>
+                                    <li>Statistics</li>
+                                    <li>Calculus (Optimization Basics)</li>
+                                    <li>Numerical Methods</li>
+                                    <li>Boolean Algebra and Logic</li>
+                                </ul>
+                            </div>)}
+                        </div>
+                    </div>
+                    {/* Course Content heading and syllabus */}
+                </div>
+            </div>
         </div>
     )
 }
